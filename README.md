@@ -16,3 +16,8 @@ gcloud app deploy [app].yaml --project=[project name]
 
 ### Deploy Cron job
 gcloud app deploy cron.yaml --project=[project name]
+
+
+Enable API Instructions
+
+Go to - https://console.cloud.google.com/apis/dashboard?project=[project name] and click to "ENABLE APIS AND SERVICES"
