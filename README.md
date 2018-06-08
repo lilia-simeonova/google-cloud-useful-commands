@@ -26,3 +26,7 @@ Enable API Instructions
 `export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"` (for Linux or Mac) or 
 
 `export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/service-account-file.json"` (For Windows)
+
+Important!
+
+If you still see the error "Permissions denied" you might want to close and re-open your console.
