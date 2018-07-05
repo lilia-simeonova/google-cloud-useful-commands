@@ -30,3 +30,22 @@ Enable API Instructions
 Important!
 
 If you still see the error "Permissions denied" you might want to close and re-open your console.
+
+## Deploy React App
+
+1. Run `npm run build` in your React app folder
+2. Open Google cloud console -> Storage -> Create a bucket and upload your `build` folder
+3. Create `app.yaml` file in your folder with the sample content and upload it as well:
+```
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
+- url: /
+  static_dir: build
+```
+4. Open Google cloud console and `mkdir new-app`
+5. Run the command `gsutil rsync -r gs://[bucket name] ./new-app`
