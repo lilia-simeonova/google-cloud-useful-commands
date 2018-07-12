@@ -1,12 +1,28 @@
 # Google cloud commands on one place
 
-## General Project Deployment
+
+1. [General Project Settings](##general-project-settings)
+
+  * [Set Project locally](##set-project-locally)
+  
+  * [Default Project](##default-project)
+  
+  * [Deploy Project](##deploy-project)
+  
+  * [Deploy Cron job](##deploy-cron-job)
+  
+2. [Enable API Instructions](##enable-api-instructions)
+  * [Permissions denied error](##permissions-denied)
+3. [Deploy React App](##deploy-react-app)
+4. [MySQL with Node.js](##mysql-with-node.js)
+
+## General Project Settings
 
 ### Set Project locally
 `gcloud config set project [project name]`
 
 
-### Check which is your Default Project
+### Default Project
 `gcloud config list --format 'value(core.project)' 2>/dev/null`
 
 
@@ -18,7 +34,7 @@
 `gcloud app deploy cron.yaml --project=[project name]`
 
 
-Enable API Instructions
+## Enable API Instructions
 
 1. Go to - https://console.cloud.google.com/apis/dashboard?project=[project_name] and click to "ENABLE APIS AND SERVICES"
 2. Create service account credentials - https://console.cloud.google.com/apis/credentials, "Create credentials" -> "Service account key" -> Download the json file -> Set your credentials in the console 
@@ -27,8 +43,10 @@ Enable API Instructions
 
 `export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/service-account-file.json"` (For Windows)
 
-Important!
 
+
+### Permissions denied
+Important!
 If you still see the error "Permissions denied" you might want to close and re-open your console.
 
 ## Deploy React App
@@ -52,7 +70,7 @@ handlers:
 5. Run the command `gsutil rsync -r gs://[bucket name] ./new-app` and `glcoud app deploy`
 6. You may need to wait for few minutes for the changes to take place
 
-## Run gcloud MySQL with Node.js
+## MySQL with Node.js
 
 1. Create new instance in gcloud console
 2. Run the sql sever locally:
