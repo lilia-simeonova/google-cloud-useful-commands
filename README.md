@@ -1,7 +1,7 @@
 # Google cloud commands on one place
 
 
-1. [General Project Settings](##general-project-settings)
+* [General Project Settings](##general-project-settings)
 
   * [Set Project locally](##set-project-locally)
   
@@ -11,10 +11,10 @@
   
   * [Deploy Cron job](##deploy-cron-job)
   
-2. [Enable API Instructions](##enable-api-instructions)
+* [Enable API Instructions](##enable-api-instructions)
   * [Permissions denied error](##permissions-denied)
-3. [Deploy React App](##deploy-react-app)
-4. [MySQL with Node.js](##mysql-with-node.js)
+* [Deploy React App](##deploy-react-app)
+* [MySQL with Node.js](##mysql-with-node.js)
 
 ## General Project Settings
 
