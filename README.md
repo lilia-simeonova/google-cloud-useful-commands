@@ -51,3 +51,12 @@ handlers:
 4. Open Google cloud console and `mkdir new-app`
 5. Run the command `gsutil rsync -r gs://[bucket name] ./new-app` and `glcoud app deploy`
 6. You may need to wait for few minutes for the changes to take place
+
+## Run gcloud MySQL with Node.js
+
+1. Create new instance in gcloud console
+2. Run the sql sever locally:
+  - Mac/Linux: ./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306
+  - Windows: cloud_sql_proxy.exe -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306 
+3. Follow the instructions [here](https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/2-structured-data) to build your nodejs server
+4. 
