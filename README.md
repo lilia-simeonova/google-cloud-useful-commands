@@ -56,7 +56,14 @@ handlers:
 
 1. Create new instance in gcloud console
 2. Run the sql sever locally:
-  - Mac/Linux: ./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306
-  - Windows: cloud_sql_proxy.exe -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306 
+  - Mac/Linux: `./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306`
+  - Windows: `cloud_sql_proxy.exe -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306`
 3. Follow the instructions [here](https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/2-structured-data) to build your nodejs server
-4. 
+
+Important!
+
+You may see the error message "Cloud SQL Administration API has not been used in project XXX before or it is disabled."
+
+Obviosly, you first have to enable the API, but if this doesn't do the trick, then you have to create your service account credentials (as described in Enable API Instructions section) and then set your credentials location with the following command:
+
+`./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306  -credential_file="./service_account.json"`
