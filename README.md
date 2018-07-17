@@ -85,3 +85,10 @@ You may see the error message "Cloud SQL Administration API has not been used in
 Obviosly, you first have to enable the API, but if this doesn't do the trick, then you have to create your service account credentials (as described in Enable API Instructions section) and then set your credentials location with the following command:
 
 `./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306  -credential_file="./service_account.json"`
+
+Make sure to add `INSTANCE_CONNECTION_NAME` variable in your CONFIG file.
+
+Also in app.yaml you should add:
+
+beta_settings:
+  cloud_sql_instances: [INSTANCE_CONNECTION_NAME]
