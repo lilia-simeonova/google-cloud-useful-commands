@@ -92,3 +92,9 @@ Also in app.yaml you should add:
 
 beta_settings:
   cloud_sql_instances: [INSTANCE_CONNECTION_NAME]
+
+## Add credentials in Dialogflow
+
+from google.oauth2.service_account import Credentials
+credentials = Credentials.from_service_account_file('<service_account_json>')
+session_client = dialogflow_v2.SessionsClient(credentials=credentials)
